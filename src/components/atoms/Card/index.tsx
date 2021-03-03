@@ -7,12 +7,12 @@ export const Card = () => {
         <div>
           <img src="/77292743.jpeg" alt="" />
         </div>
-        <div className="px-2 py-4">
-          <h1 className="">
+        <div className="flex flex-col px-2 py-4">
+          <h1>
             タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル
           </h1>
-          <time className="block mt-4 text-gray-400">2021/2/2</time>
-          <cite className="block text-gray-400 not-italic">著者</cite>
+          <time className="mt-4 text-gray-400">2021/2/2</time>
+          <cite className="text-gray-400 not-italic">著者</cite>
         </div>
       </a>
     </section>
