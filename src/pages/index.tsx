@@ -1,7 +1,8 @@
 import react from 'react';
+import {Card} from '../components/atoms/Card';
 
 const app = () => {
-  return <h1>Hello</h1>;
+  return <Card />;
 };
 
 export default app;
