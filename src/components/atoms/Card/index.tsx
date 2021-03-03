@@ -1,18 +1,31 @@
 import React from 'react';
 
-export const Card = () => {
+export const Card = ({
+  author,
+  title,
+  publishedAt,
+  urlToImage,
+  url,
+  description,
+}) => {
+  const formattedPublishedAt = publishedAt.slice(0, 10).replace(/-/g, '/');
+  const formattedTitle = title.length < 90 ? title : `${title.slice(0, 90)}...`;
   return (
-    <section className="w-72 shadow-md">
-      <a href="" className="block w-full h-full hover:opacity-80">
-        <div>
-          <img src="/77292743.jpeg" alt="" />
+    <section className="shadow-md">
+      <a href={url} className="block w-full h-full hover:opacity-80">
+        <div className="w-full h-48">
+          <img
+            className="w-full h-full object-cover"
+            src={urlToImage}
+            alt={description}
+          />
         </div>
-        <div className="flex flex-col px-2 py-4">
-          <h1>
-            タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル
-          </h1>
-          <time className="mt-4 text-gray-400">2021/2/2</time>
-          <cite className="text-gray-400 not-italic">著者</cite>
+        <div className="flex flex-col px-2 py-4 h-48">
+          <h1>{formattedTitle}</h1>
+          <div className="mt-auto">
+            <time className="text-gray-400">{formattedPublishedAt}</time>
+            <cite className="block text-gray-400 not-italic">{author}</cite>
+          </div>
         </div>
       </a>
     </section>
