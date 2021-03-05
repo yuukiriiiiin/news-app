@@ -1,5 +1,14 @@
 import React from 'react';
 
+// export type Props = {
+//   author: string;
+//   title: string;
+//   publishedAt: string;
+//   urlToImage: string;
+//   url: string;
+//   description: string;
+// };
+
 export const Card = ({
   author,
   title,
